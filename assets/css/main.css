@@ -195,6 +195,49 @@ h6 {
   }
 }
 
+
+/* Adjust the sitename styling */
+.sitename1 {
+  font-size: 3rem; /* Adjust size for desktop */
+  text-align: left; /* Align text to the left (or use center if desired) */
+  font-family: 'Arial', sans-serif;
+  margin: 0; /* Remove any default margin */
+  color: #333; /* Text color */
+}
+
+/* Adjust the logo container to control sitename position */
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align the sitename logo to the left */
+  padding-left: 20px; /* Add padding to give space from the left edge */
+}
+
+@media (max-width: 768px) {
+  /* Mobile responsiveness */
+  .sitename1 {
+    font-size: 2rem; /* Smaller text size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens */
+  .sitename1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* For very small mobile devices (max-width 320px) */
+@media (max-width: 320px) {
+  .sitename1 {
+    font-size: 1.2rem; /* Adjust font size for small screens */
+    margin: 0 5px; /* Adjust margins to prevent overflow */
+    text-align: center; /* Center the text if needed */
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
