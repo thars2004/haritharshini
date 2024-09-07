@@ -198,9 +198,9 @@ h6 {
 
 /* Adjust the sitename styling */
 .sitename1 {
-  font-size: 3rem; /* Adjust size for desktop */
+  font-size: 2.2rem; /* Adjust size for desktop */
   text-align: left; /* Align text to the left (or use center if desired) */
-  font-family: 'Arial', sans-serif;
+  font-family: 'lucida handwriting';
   margin: 0; /* Remove any default margin */
   color: #333; /* Text color */
 }
@@ -216,21 +216,21 @@ h6 {
 @media (max-width: 768px) {
   /* Mobile responsiveness */
   .sitename1 {
-    font-size: 2rem; /* Smaller text size for mobile */
+    font-size: 1.7rem; /* Smaller text size for mobile */
   }
 }
 
 @media (max-width: 480px) {
   /* For very small screens */
   .sitename1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 /* For very small mobile devices (max-width 320px) */
 @media (max-width: 320px) {
   .sitename1 {
-    font-size: 1.2rem; /* Adjust font size for small screens */
+    font-size: 0.9rem; /* Adjust font size for small screens */
     margin: 0 5px; /* Adjust margins to prevent overflow */
     text-align: center; /* Center the text if needed */
   }
@@ -1127,8 +1127,56 @@ section,
   fill: #0dcaf0;
 }
 
+.Certificates .Certificate-item.item-brown i {
+  color: #895129;
+}
+
+.Certificates .Certificate-item.item-brown:hover .icon i {
+  color: #fff;
+}
+
+.Certificates .Certificate-item.item-brown:hover .icon path {
+  fill: #895129;
+}
+
+.Certificates .Certificate-item.item-purple i {
+  color: #b100cd;
+}
+
+.Certificates .Certificate-item.item-purple:hover .icon i {
+  color: #fff;
+}
+
+.Certificates .Certificate-item.item-purple:hover .icon path {
+  fill: #b100cd;
+}
+
+.Certificates .Certificate-item.item-yellow i {
+  color: #ecf00d;
+}
+
+.Certificates .Certificate-item.item-yellow:hover .icon i {
+  color: #fff;
+}
+
+.Certificates .Certificate-item.item-yellow:hover .icon path {
+  fill: #ecf00d;
+}
+
+.Certificates .Certificate-item.item-black i {
+  color: #100600;
+}
+
+.Certificates .Certificate-item.item-black:hover .icon i {
+  color: #fff;
+}
+
+.Certificates .Certificate-item.item-black:hover .icon path {
+  fill: #100600;
+}
+
 .Certificates .Certificate-item.item-orange i {
-  color: #fd7e14;
+  color: #ff7d26;
 }
 
 .Certificates .Certificate-item.item-orange:hover .icon i {
@@ -1136,7 +1184,7 @@ section,
 }
 
 .Certificates .Certificate-item.item-orange:hover .icon path {
-  fill: #fd7e14;
+  fill: #ff7d26;
 }
 
 .Certificates .Certificate-item.item-teal i {
@@ -1152,7 +1200,7 @@ section,
 }
 
 .Certificates .Certificate-item.item-red i {
-  color: #df1529;
+  color: #ff0000;
 }
 
 .Certificates .Certificate-item.item-red:hover .icon i {
@@ -1160,7 +1208,7 @@ section,
 }
 
 .Certificates .Certificate-item.item-red:hover .icon path {
-  fill: #df1529;
+  fill: #ff0000;
 }
 
 .Certificates .Certificate-item.item-indigo i {
