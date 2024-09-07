@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://thars2004/github.io/haritharshini/sitemap.xml
