@@ -1,147 +1,596 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home - Hari Tharshini T</title>
-  <meta name="description" content="Aspiring tech enthusiast with a BSc in Information Technology, passionate about coding, project development.">
-  <meta name="keywords" content="Hari Tharshini T - Personal Website">
-  <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Tharshini T | Software Engineer</title>
+        <!-- SEO Meta Tags -->
+    <meta name="description" content="Hari Tharshini T is a Software Engineer specializing in building robust, scalable applications and exceptional digital experiences.">
+    <meta name="keywords" content="Hari Tharshini, Software Engineer, React, Django, Full Stack Developer, Hudsmer Business Solutions">
+    <meta name="author" content="Hari Tharshini T">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thars2004.github.io/haritharshini/">
+    <meta property="og:title" content="Hari Tharshini T | Software Engineer">
+    <meta property="og:description" content="Software Engineer specializing in building robust, scalable applications.">
+    <meta property="og:image" content="https://thars2004.github.io/haritharshini/assets/img/profile.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thars2004.github.io/haritharshini/">
+    <meta property="twitter:title" content="Hari Tharshini T | Software Engineer">
+    <meta property="twitter:description" content="Software Engineer specializing in building robust, scalable applications.">
+    <meta property="twitter:image" content="https://thars2004.github.io/haritharshini/assets/img/profile.png">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-  <link rel="manifest" href="assets/img/site.webmanifest">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS for subtle animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', /* slate-900 */
+                        secondary: '#475569', /* slate-600 */
+                        accent: '#2563eb', /* blue-600 */
+                        bgLight: '#ffffff',
+                        bgAlt: '#f8fafc', /* slate-50 */
+                        borderLight: '#e2e8f0', /* slate-200 */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: #ffffff;
+        }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        .section-padding {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        /* Clean Navigation */
+        .nav-link {
+            position: relative;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+        .nav-link:hover {
+            color: #0f172a;
+        }
 
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Clean Buttons */
+        .btn-primary {
+            display: inline-block;
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #0f172a;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffffff;
+            color: #0f172a;
+        }
+
+        /* Professional Card Hover */
+        .clean-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .clean-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
-<body class="index-page">
+<body class="antialiased selection:bg-accent selection:text-white">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <p class="sitename1">Hari Tharshini T</p>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="certificates.html">Certificates</a></li>
-          <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="fees.html">Fees Mgt System</a></li>
-              <li><a href="parlour.html">Parlour Mgt System</a></li>
-              <li><a href="smartclass.html">Class Booking System</a></li>
-              <li><a href="ken.html">KENews</a></li>
-              <li class="dropdown"><a href="#"><span>IShield</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="ishieldweb.html">IShield Website</a></li>
-                  <li><a href="ishieldapp.html">IShield App</a></li>
-                  <!-- <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li> -->
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="mailto:haritharshinit@gmail.com"><i class="bi bi-envelope"></i></a>
-        <a href="https://www.github.com/thars2004"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/hari-tharshini-t-589017241"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.instagram.com/thars2004"><i class="bi bi-instagram"></i></a>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); filter: brightness(50%);">
-
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-          <h2 style="color: white; text-shadow: 2px 2px 4px black;">Hari Tharshini T</h2>
-          <p style="color: white; text-shadow: 2px 2px 4px black;">
-            Aspiring tech enthusiast with a BSc in Information Technology, passionate about coding, project development.
-          </p>
-          <a href="about.html" class="btn-get-started" style="color: white; text-shadow: 2px 2px 4px black;">About Me</a>
+        <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-borderLight transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-primary tracking-tight">Hari Tharshini<span class="text-accent">.</span></a>
+            <nav class="hidden md:flex gap-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl p-2 focus:outline-none"><i class="fas fa-bars"></i></button>
         </div>
-
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-borderLight absolute w-full shadow-lg">
+            <div class="flex flex-col px-6 py-4 gap-4">
+                <a href="#about" class="mobile-link text-primary font-medium hover:text-accent transition-colors py-2 border-b border-borderLight">About</a>
+                <a href="#experience" class="mobile-link text-primary font-medium hover:text-accent transition-colors py-2 border-b border-borderLight">Experience</a>
+                <a href="#skills" class="mobile-link text-primary font-medium hover:text-accent transition-colors py-2 border-b border-borderLight">Skills</a>
+                <a href="#projects" class="mobile-link text-primary font-medium hover:text-accent transition-colors py-2 border-b border-borderLight">Projects</a>
+                <a href="#contact" class="mobile-link text-primary font-medium hover:text-accent transition-colors py-2">Contact</a>
+            </div>
         </div>
-      </div>
+    </header>
 
-    </section><!-- /Hero Section -->
+    <main class="pt-20">
 
-  </main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[85vh] flex items-center bg-white">
+            <div class="max-w-6xl mx-auto px-6 w-full" data-aos="fade-up" data-aos-duration="1000">
+                <p class="text-accent font-semibold mb-4 tracking-wide uppercase text-sm">Welcome to my portfolio</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-primary mb-6 tracking-tight leading-tight">
+                    Software Engineer.<br>
+                    <span class="text-secondary">Building robust solutions.</span>
+                </h1>
+                <p class="text-lg text-secondary max-w-2xl mb-10 leading-relaxed">
+                    I am a dedicated software engineer specializing in scalable applications, clean architecture, and
+                    exceptional digital experiences. Currently driving innovation at Hudsmer Business Solutions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#contact"
+                        class="inline-block px-8 py-3 rounded text-primary font-medium hover:text-accent transition-colors">Contact
+                        Me &rarr;</a>
+                </div>
+            </div>
+        </section>
 
-  <footer id="footer" class="footer light-background">
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-bgAlt border-y border-borderLight">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <h2 class="text-3xl font-bold text-primary mb-6 tracking-tight">About Me</h2>
+                        <div class="space-y-4 text-secondary leading-relaxed">
+                            <p>My journey in technology started with a curiosity about how things work, which evolved
+                                into a passion for creating solutions that make a tangible difference in business
+                                operations.</p>
+                            <p>Currently, I'm working at Hudsmer Business Solutions Pvt Ltd, where I contribute to
+                                developing enterprise-level software solutions. I collaborate with cross-functional
+                                teams to architect scalable backend systems and responsive frontend applications.</p>
+                            <p>When I’m free, I enjoy building small yet impactful automation tools—simplifying daily
+                                tasks and constantly refining my technical skill set.</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" class="flex justify-center md:justify-end">
+                        <div
+                            class="relative w-full max-w-sm aspect-square bg-white border border-borderLight p-2 shadow-sm">
+                            <div
+                                class="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400 overflow-hidden">
+                                <img src="assets/img/profile.png" alt="Hari Tharshini"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/10 -z-10"></div>
+                            <div class="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 -z-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Hari Tharshini T</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="mailto:haritharshinit@gmail.com"><i class="bi bi-envelope"></i></a>
-        <a href="https://www.github.com/thars2004"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/hari-tharshini-t-589017241"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.instagram.com/thars2004"><i class="bi bi-instagram"></i></a>
-      </div>
-    </div>
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-primary mb-12 tracking-tight text-center" data-aos="fade-up">
+                    Professional Experience</h2>
+                <div class="space-y-12">
 
-  </footer>
+                    <div class="relative pl-8 md:pl-0" data-aos="fade-up">
+                        <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
+                                <span class="text-sm font-semibold text-slate-400 block mt-1">Feb 2025 - Present</span>
+                            </div>
+                            <div class="md:col-span-4 relative border-l-2 border-borderLight pl-8 pb-12 last:pb-0">
+                                <div
+                                    class="absolute w-4 h-4 bg-white border-2 border-accent rounded-full -left-[9px] top-1">
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Senior Software Engineer</h3>
+                                <h4 class="text-md font-medium text-accent mb-3">Hudsmer Business Solutions Pvt Ltd</h4>
+                                <p class="text-secondary leading-relaxed">Leading development of enterprise-level
+                                    software solutions and mentoring junior developers. Architecting scalable backend
+                                    systems using Django and Python. Developing responsive frontend applications with
+                                    React.js.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0" data-aos="fade-up">
+                        <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
+                                <span class="text-sm font-semibold text-slate-400 block mt-1">Oct 2024 - Feb 2025</span>
+                            </div>
+                            <div class="md:col-span-4 relative border-l-2 border-borderLight pl-8 pb-12 last:pb-0">
+                                <div
+                                    class="absolute w-4 h-4 bg-white border-2 border-accent rounded-full -left-[9px] top-1">
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">Software Engineer</h3>
+                                <h4 class="text-md font-medium text-accent mb-3">Hudsmer Business Solutions Pvt Ltd</h4>
+                                <p class="text-secondary leading-relaxed">Developed and maintained web applications
+                                    using React.js and PHP. Built responsive user interfaces with modern CSS frameworks.
+                                    Implemented RESTful APIs and integrated third-party services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0" data-aos="fade-up">
+                        <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
+                            <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
+                                <span class="text-sm font-semibold text-slate-400 block mt-1">Jun 2024 - Sep 2024</span>
+                            </div>
+                            <div class="md:col-span-4 relative border-l-2 border-borderLight pl-8 pb-12 last:pb-0">
+                                <div
+                                    class="absolute w-4 h-4 bg-white border-2 border-accent rounded-full -left-[9px] top-1">
+                                </div>
+                                <h3 class="text-xl font-bold text-primary">App Developer</h3>
+                                <h4 class="text-md font-medium text-accent mb-3">Techleafe IT Solutions</h4>
+                                <p class="text-secondary leading-relaxed">Developed mobile applications using React
+                                    Native. Integrated REST APIs and managed state using React hooks. Participated in
+                                    the complete app development lifecycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-bgAlt border-y border-borderLight">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-primary mb-12 tracking-tight text-center" data-aos="fade-up">
+                    Technical Proficiency</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Frontend
+                            Development</h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                React.js</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> React
+                                Native</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> HTML5
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> CSS3
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                JavaScript (ES6+)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                Tailwind</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Backend
+                            Development</h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Python
+                                (Django)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> PHP
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                CodeIgniter</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Laravel
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> ASP.NET
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Java
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Node.js
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Databases</h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> MySQL
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Oracle
+                                11G</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> SQLite3
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Tools &
+                            Infrastructure</h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Git
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Docker
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Linux
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Postman
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> VS Code
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Core Languages
+                        </h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> C</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> C++
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Python
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                JavaScript</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> PHP
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 border border-borderLight shadow-sm" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <h3 class="text-lg font-bold text-primary mb-4 border-b border-borderLight pb-2">Design &
+                            Reporting</h3>
+                        <ul class="space-y-2 text-sm text-secondary font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Figma
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Power
+                                BI</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i>
+                                Microsoft Office</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-primary mb-12 tracking-tight text-center" data-aos="fade-up">Selected
+                    Work</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">Immigration Application</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">PHP, MySQL</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Platform for managing immigration
+                            applications with document tracking and compliance validation.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Modern Coffee POS</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">CodeIgniter, jQuery
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Order management platform with
+                            inventory tracking and payment processing integration.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">RecycHBS Dashboards</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React, Python</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Web dashboards for real-time scrap
+                            order tracking and analytics.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">RecycHBS Mobile App</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React Native,
+                            Firebase</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Cross-platform mobile application
+                            for on-the-go order management.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Hudsmer Business Solutions</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React JS, Tailwind
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Modern corporate website showcasing
+                            IT services and solutions.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">Fortech Infosol</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React JS, Tailwind
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Sleek and professional landing page
+                            representing digital presence.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">Shiralure</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React JS, Bootstrap
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">NEC Internship Project integrating
+                            modules into a functional website.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">CEO Portfolio</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">HTML, CSS, JS</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Personal portfolio site for Harish
+                            Rohith Israel, CEO of Hudsmer.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">Bulk ID Card Generator</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">HTML, CSS, JS</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Automated ID card generation from
+                            Excel sheets with PDF export.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">AP Services Document Processing</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React JS, REST API
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Front-end system managing
+                            document-based workflows and verifications.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Data Entry Validation</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">Excel, QA Automation
+                        </p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Excel-based system to validate data
+                            entry with automated rule checks.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">Albaatros Landing Page</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">Vite + React, PHP</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Landing page showcasing Albaatros
+                            consultancy services.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">AquaFarm Platform</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React, Django</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Comprehensive aquaculture management
+                            platform featuring a web dashboard and admin panel.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Automated Document Remediation</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">Python</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Tool automating accessibility
+                            remediation, validation, and formatting for Word documents.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">Power BI Reporting Pipeline</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">Python, Power BI</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Automated pipeline to aggregate
+                            multi-source data and publish dynamic BI dashboards.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">College Fees Management System</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">PHP, MySQL</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">System for managing student fees,
+                            payments, and financial records.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Beauty Parlour Management</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">PHP, MySQL</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Comprehensive parlour management
+                            system with appointment booking.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-primary mb-2">News Channel Platform</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">PHP, Bootstrap</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Specialized web platform for a news
+                            channel with responsive interface.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-primary mb-2">Smart Class Booking System</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">PHP, MySQL</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Intelligent classroom reservation
+                            system with real-time tracking.</p>
+                    </div>
+                    <div class="clean-card p-6 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-primary mb-2">Task Management Mobile App</h3>
+                        <p class="text-xs font-semibold text-accent mb-3 uppercase tracking-wider">React Native</p>
+                        <p class="text-sm text-secondary leading-relaxed flex-grow">Cross-platform mobile application
+                            for personal task management.</p>
+                    </div>
+                </div>
+        </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-primary text-center">
+            <div class="max-w-2xl mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-6 tracking-tight">Ready to collaborate?</h2>
+                <p class="text-slate-300 mb-10 leading-relaxed">Whether you have a question, a project inquiry, or just
+                    want to connect, my inbox is always open.</p>
+                <a href="mailto:haritharshinit@gmail.com"
+                    class="inline-block bg-accent hover:bg-white text-white hover:text-primary font-medium px-8 py-3 rounded transition-colors">
+                    Send an Email
+                </a>
+
+                <div class="flex justify-center gap-6 mt-16 border-t border-slate-700 pt-8">
+                    <a href="https://linkedin.com/in/hari-tharshini-t-589017241" target="_blank"
+                        class="text-slate-400 hover:text-white transition-colors text-xl"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/thars2004" target="_blank"
+                        class="text-slate-400 hover:text-white transition-colors text-xl"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:haritharshinit@gmail.com"
+                        class="text-slate-400 hover:text-white transition-colors text-xl"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="tel:+918300743286"
+                        class="text-slate-400 hover:text-white transition-colors text-xl flex items-center gap-2"><i
+                            class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-center py-6 border-t border-slate-800">
+        <p class="text-slate-500 text-sm">&copy; <span id="current-year"></span> Hari Tharshini T. All rights reserved.</p>
+    </footer>
+
+        <!-- AOS JS for Animations -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
 </body>
 
 </html>
