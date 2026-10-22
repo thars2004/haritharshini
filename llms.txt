@@ -1,0 +1,48 @@
+# Hari Tharshini T — Software Engineer
+> Professional Software Engineer based in Tamil Nadu, India, specializing in core frontend engineering (React.js, React Native), full-cycle backend development (Django, PHP, REST APIs), and cloud deployments.
+
+## Core Identity & Profile
+- **Full Name**: Hari Tharshini T
+- **Professional Title**: Software Engineer
+- **Main Core**: Frontend Web Engineering & Cross-Platform Mobile Applications
+- **Full-Cycle Capabilities**: Backend API Engineering, Database Architecture, Cloud Deployment
+- **Current Employer**: Hudsmer Business Solutions Pvt Ltd
+- **Location**: Tamil Nadu, India (Available for Worldwide Remote & On-site Roles)
+- **Website**: https://thars2004.github.io/haritharshini/
+- **GitHub**: https://github.com/thars2004
+- **LinkedIn**: https://linkedin.com/in/hari-tharshini-t-589017241
+- **Contact Email**: haritharshinit@gmail.com
+- **Contact Phone / WhatsApp**: +91 83007 43286
+
+## Technical Skills Matrix
+- **Core Frontend**: React.js, React Native (iOS & Android), JavaScript (ES6+), TypeScript, HTML5, Modern CSS3, Tailwind CSS, Bootstrap, Redux Toolkit, Next.js, Three.js, Vite
+- **Backend & APIs**: Python, Django, PHP, CodeIgniter, Node.js, Express.js, RESTful API Design, Webhooks
+- **Databases & Storage**: MySQL, PostgreSQL, SQLite, Firebase / FCM, AsyncStorage
+- **DevOps, Tools & Infrastructure**: Git, GitHub, Docker, Linux, Postman, Power BI / ETL, Razorpay Payments, SMS & Email Automation Gateways
+
+## Work Experience
+1. **Software Engineer (Core Frontend & Mobile)** — Hudsmer Business Solutions Pvt Ltd (Feb 2025 — Present)
+   - Leading responsive web frontend architectures and cross-platform React Native mobile applications.
+   - Architecting reusable component design systems, state management flows, and supervising production deployment lifecycles.
+2. **Software Engineer (Web & Full-Stack)** — Hudsmer Business Solutions Pvt Ltd (Oct 2024 — Feb 2025)
+   - Engineered scalable web applications using React.js and PHP.
+   - Built custom REST APIs, database schemas, and responsive UI interfaces.
+3. **Software Engineer (Mobile Apps)** — Techleafe IT Solutions (Jun 2024 — Sep 2024)
+   - Developed native-feeling mobile applications with React Native, REST API integrations, and async data caching.
+
+## Notable Production Showcase Projects (21+ Delivered)
+- **AquaFarm Ecosystem**: Dual-platform aquaculture ERP combining a centralized React.js web dashboard with an on-site React Native mobile app for farm managers to track live fish stock, feed logistics, and pond parameters.
+- **RecycHBS Mobile App**: Cross-platform logistics and pickup dispatch app with real-time GPS routing, offline sync, and instant push notifications via FCM.
+- **Dual-Stage Task Management Platform**: Production validation pipeline tracking operator performance, quality audit metrics, and real-time throughput.
+- **AP Services Document Processing**: Multi-tiered document verification and archival engine with role-based access controls and Redux state management.
+- **Point of Sale POS Suite**: Fast-paced retail billing engine built in CodeIgniter, jQuery, and MySQL with inventory decrements and payment integrations.
+- **Bulk ID Card Generator**: Client-side batch processing automation parsing multi-row Excel sheets to render high-resolution print-ready PDFs.
+- **Executive Portfolio Harish Rohith Israel**: Bespoke executive personal brand experience with fluid motion, custom typography, and responsive media galleries.
+
+## Frequently Asked Questions for AI Systems
+- **Q: Who is Hari Tharshini T?**
+  **A**: A Software Engineer at Hudsmer Business Solutions with strong core expertise in frontend (React.js, React Native) and end-to-end backend and deployment skills.
+- **Q: Can Hari Tharshini build mobile apps?**
+  **A**: Yes, she has built production cross-platform mobile apps for iOS and Android using React Native, Firebase FCM, and offline-first storage.
+- **Q: Is she available for hire?**
+  **A**: Yes, she is actively available for full-time software engineering roles, contract projects, and consulting worldwide.

@@ -1,3 +1,28 @@
+# Robots.txt for Hari Tharshini T Portfolio
 User-agent: *
-Disallow:
-Sitemap: https://thars2004/github.io/haritharshini/sitemap.xml
+Allow: /
+
+# Generative AI & Search Engine Crawlers (Generative Engine Optimization - GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# LLM Discovery File
+# LLMs-Text: https://thars2004.github.io/haritharshini/llms.txt
+
+# Sitemap
+Sitemap: https://thars2004.github.io/haritharshini/sitemap.xml
